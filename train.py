@@ -11,6 +11,9 @@ from sklearn.metrics import confusion_matrix
 
 import pickle
 
+#parameters
+C = 0.1
+
 #data wrangling and format standardization
 df = pd.read_csv('Telco-Customer-Churn.csv')
 
@@ -53,19 +56,12 @@ def train(df, y, C):
 
     return dv, model
 
-def predict(df, dv, model):
-    cat = df[categorical + numerical].to_dict(orient='records')
 
-    X = dv.transform(cat)
-
-    y_pred = model.predict_proba(X)[:, 1]
-
-    return y_pred
 
 # seeing that the best model was with C= 0.1 we now train on full training set (training+val) and compare with test
 y_train = df_train_full.churn.values
 y_test = df_test.churn.values
-C = 0.1
+
 # the model and dv below are ultimitly the file we want to export
 dv, model = train(df_train_full, y_train, C=C)
 
