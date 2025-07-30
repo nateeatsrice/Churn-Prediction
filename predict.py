@@ -29,7 +29,6 @@ customer = {
     'totalcharges': 3320.75
 }
 
-
 def predict(customer, dv, model):
     X = dv.transform([customer])
     y_pred = model.predict_proba(X)[:, 1]
@@ -37,5 +36,3 @@ def predict(customer, dv, model):
     print ('churn probability is', y_pred[0])
 
 predict(customer, dv, model)
-
-
