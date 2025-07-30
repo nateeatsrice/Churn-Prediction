@@ -73,8 +73,8 @@ dv, model = train(df_train_full, y_train, C=C)
 with open('./churn-model.bin', 'wb') as f_out:
     pickle.dump((dv, model), f_out)
 
-import requests
-url = 'http://localhost:9696/predict'
-response = requests.post(url, json=customer)
-result = response.json()
-result
+# import requests
+# url = 'http://localhost:9696/predict'
+# response = requests.post(url, json=customer)
+# result = response.json()
+# result
