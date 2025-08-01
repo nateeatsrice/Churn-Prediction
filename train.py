@@ -56,8 +56,6 @@ def train(df, y, C):
 
     return dv, model
 
-
-
 # seeing that the best model was with C= 0.1 we now train on full training set (training+val) and compare with test
 y_train = df_train_full.churn.values
 y_test = df_test.churn.values
