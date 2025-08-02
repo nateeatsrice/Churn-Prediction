@@ -8,9 +8,7 @@ def predict_single(customer, dv, model):
     y_pred = model.predict_proba(X)[:, 1]
     return y_pred[0]
 
-model_file = 'churn-model.bin'
-
-with open(model_file, 'rb') as f_in:
+with open('churn-model.bin', 'rb') as f_in:
     dv, model = pickle.load(f_in)
 
 # create a Flask app name "churn"
