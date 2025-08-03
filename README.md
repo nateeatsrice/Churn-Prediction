@@ -27,7 +27,7 @@ The model is trained on a binary classification dataset and served using a Flask
 
 ```bash
 git clone https://github.com/your-username/telco-churn-prediction.git
-cd telco-churn-prediction
+cd churn-prediction
 ```
 ---
 ### 2. Install dependencies (via Pipenv)
