@@ -12,4 +12,4 @@ COPY ["predict.py", "predict-test.py", "churn-model.bin", "./"]
 
 EXPOSE 9698
 
-ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:9696", "predict:app"] 
+ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:9698", "predict:app"] 
